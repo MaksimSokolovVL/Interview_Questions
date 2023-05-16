@@ -1,0 +1,23 @@
+package com.example.sokolov.interviewquestions.controller;
+
+import com.example.sokolov.interviewquestions.util.JoinedRolesUtil;
+import com.example.sokolov.interviewquestions.domain.entity.User;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/user")
+public class UserController {
+
+    @GetMapping
+    public String adminPanel(Model model, Authentication auth) {
+        User userAuth = (User) auth.getPrincipal();
+        model.addAttribute("roles_list_userAuth", JoinedRolesUtil.joinRoles(userAuth));
+        model.addAttribute("user_auth", userAuth);
+        return "admin";
+    }
+}

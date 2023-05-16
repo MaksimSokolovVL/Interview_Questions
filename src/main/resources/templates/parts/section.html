@@ -1,0 +1,71 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<div th:fragment="fragment_section">
+    <div class="container-xl mx-auto p-2">
+        <div class="list-group">
+                <!---->
+        </div>
+    </div>
+
+    <button type="button"
+            class="btn btn-danger"
+            data-bs-toggle="modal"
+            data-bs-target="#sectionModal"
+
+            onclick="">Update Sections
+    </button>
+
+<!--Modal Windows-->
+    <div class="modal fade" id="sectionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form class="form_mod" id="form_mod_id">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body mx-auto p-2 center-txt">
+<!--        -->
+
+                        <div class="dropdown"><!-- выпадающий список - начало-->
+                            <button class="btn btn-info dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" onclick="cleanVariableField()">
+                                Choose a question topic
+                            </button>
+                            <ul class="dropdown-menu">
+                                <!--allSectionDropdown()-->
+                            </ul>
+                        </div><!-- выпадающий список - конец-->
+
+                        <div class="variable-field">
+
+                        </div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function(event) {
+                                allSectionDropdown();
+                            });
+                        </script>
+
+<!--            -->
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="updateButtonSection" type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="">Update
+                        </button>
+                        <button id="deleteButtonSection" type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                onclick="">Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+</html>

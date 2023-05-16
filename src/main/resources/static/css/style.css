@@ -1,0 +1,45 @@
+.top-h4-no-diablo-div {
+    background-color: #f0f0f0;
+    margin: 15px;
+}
+
+.top-h1 {
+    font-size: 30px;
+    font-family: 'Diablo', sans-serif;
+    text-align: center;
+}
+
+.h1_index {
+    font-size: 50px;
+    font-family: 'Diablo', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffc820;
+}
+
+.top-h5 {
+    font-size: 16px;
+    font-family: 'Diablo', sans-serif;
+}
+
+@font-face {
+    font-family: 'Diablo';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Diablo'), url('https://fonts.cdnfonts.com/s/12968/diablo.woff') format('woff');
+}
+
+.error, .error-message {
+    background: #FF6262;
+}
+
+.ok {
+    background: #2EDB2E;
+}
+
+.li-style {
+    list-style-type: none;
+}
+
